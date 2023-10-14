@@ -1,0 +1,9 @@
+<h2>Add new hero</h2>
+
+<form (ngSubmit)="addHero()">
+    <div>
+        <label>Name</label>
+        <input type="text" [(ngModel)]="heroesService.newHeroName.name" name="hero-name">
+    </div>
+    <button>Save</button>
+</form>

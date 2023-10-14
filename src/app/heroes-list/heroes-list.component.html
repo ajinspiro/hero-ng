@@ -1,5 +1,5 @@
 <h2>Heroes</h2>
-
+<a [routerLink]="['/add']">Add new hero</a>
 <ul>
     <li *ngFor="let hero of heroesService.heroes | async">{{hero.name}}</li>
 </ul>
