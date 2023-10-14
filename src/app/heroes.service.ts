@@ -7,13 +7,12 @@ import { IHero } from './models/ihero';
 })
 export class HeroesService {
 
-  get baseUrl(): string {
+  private get baseUrl(): string {
     return 'http://localhost:4441/api/'
   }
 
   constructor(private http: HttpClient) { }
 
-  getHeroes(): Observable<IHero[]> {
-    return this.http.get<IHero[]>(`${this.baseUrl}heroes`)
-  }
+  heroes: Observable<IHero[]> = this.http.get<IHero[]>(`${this.baseUrl}heroes`)
+
 }
